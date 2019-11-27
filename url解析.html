@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function urlArgs() {
+        var args = {};
+        var query = location.search.substring(1);
+        pairs = query.split("&");
+        for (var i = 0;i < pairs.length; i++) {
+            var index = pairs[i].indexOf("=");
+            if (index == -1) continue;
+            var prop = pairs[i].substring(0,index);
+            var value = pairs[i].substring(index + 1);
+            args[prop] = value;
+        } 
+        return args;
+    }   
+</script>
+</html>
